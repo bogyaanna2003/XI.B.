@@ -10,8 +10,6 @@ int main()
     cin >> n;
     for(sor=0; sor<n; sor++){
         for(oszlop = 0; oszlop < n; oszlop++){
-            cout<< "m[" << sor << "][" << oszlop << "]=";
-            cin >> m[sor][oszlop];
             if(sor>oszlop){
                  m[sor][oszlop]=2;
             }
