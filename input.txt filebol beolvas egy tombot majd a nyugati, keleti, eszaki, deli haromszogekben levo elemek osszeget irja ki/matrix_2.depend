@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1602507427 source:d:\hello\infó\matrix_2\main.cpp
+	<iostream>
+	<fstream>
+
