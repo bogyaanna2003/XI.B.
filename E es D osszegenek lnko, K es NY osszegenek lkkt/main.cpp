@@ -6,9 +6,9 @@ using namespace std;
 int main()
 {
     int  c, n, i, j, E=0, K=0, D=0, NY=0;
-    int m[n][n];
     ifstream in("input.txt");
     in >> n;
+    int m[n][n];
     for(i=0; i<n; i++)
     {
         for(j=0; j<n; j++)
