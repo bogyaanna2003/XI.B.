@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1604562186 source:d:\hello\infó\string, 1.feladat.ketdimenzios tomb 3\main.cpp
+	<iostream>
+	<string>
+	<algorithm>
+	<fstream>
+
