@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1604347841 source:d:\hello\infó\2 string,a 2.ket karakterbol all,majd ahol az s2 megjelen az s1ben,alakitsuk at az s1ben a ket karaktert nagybeture\main.cpp
+	<iostream>
+	<string>
+	<algorithm>
+
