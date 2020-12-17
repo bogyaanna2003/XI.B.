@@ -1,21 +1,17 @@
 #include <iostream>
-
 using namespace std;
-int paros(int n);
-int paratlan(int n){
-if(n==0){
-    return 0;
+int fakt(int n){
+  if (n==0){
+  return 1;
+  }
+  return n*fakt(n-1);
 }
-return n+paros(n-1);
-}
-int paros(int n){
-if(n==0){
-    return 0;
-}
-return n+paratlan(n-1);
-}
-int main()
-{
-    cout<<paros(13);
-    return 0;
-}
+
+int main(){
+  int n;
+  cout << "kerem a szamot:"  ;
+  cin >> n;
+  cout << "a faktorialis " << fakt(n);
+  return 0;
+  }
+
