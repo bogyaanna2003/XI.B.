@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1613033418 source:d:\hello\infó\struct, laborfeladat, osztalyban legjobban tanulo kek szemu diakja pl\main.cpp
+	<iostream>
+	<fstream>
+	<string>
+
