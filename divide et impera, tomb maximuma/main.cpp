@@ -16,15 +16,6 @@ int max(int balindex, int jobbindex){
     }
    return jobbmax;
 }
-int max(){
-int max=v[0];
-for(int i=1;i<n;i++){
-    if(max<v[i]){
-        max=v[i];
-    }
-}
-return max;
-}
 int main()
 {
      cout<<"max="<<max(0,n);
