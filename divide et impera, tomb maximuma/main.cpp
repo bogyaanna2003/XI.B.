@@ -18,6 +18,6 @@ int max(int balindex, int jobbindex){
 }
 int main()
 {
-     cout<<"max="<<max(0,n);
+     cout<<"max="<<max(0,n-1);
     return 0;
 }
