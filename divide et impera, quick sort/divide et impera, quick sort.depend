@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1613464178 source:d:\hello\infó\divide et impera, quick sort\main.cpp
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+
