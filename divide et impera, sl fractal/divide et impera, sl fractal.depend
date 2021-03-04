@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1614845048 source:d:\hello\infó\divide et impera, sl fractal\main.cpp
+	<graphics.h>
+	<math.h>
+	<stdlib.h>
+	<iostream>
+
