@@ -9,7 +9,7 @@ bool lehet(int szam)
         prev_szamjegy = szamjegy;
         szamjegy = szam%10;
         szam = szam/10;
-        if(prev_szamjegy<szamjegy)
+        if(prev_szamjegy<=szamjegy)
         {
             return false;
         }
