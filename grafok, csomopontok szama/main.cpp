@@ -1,64 +1,89 @@
 #include <iostream>
-#include <fstream>
 
 using namespace std;
-int v[100][100];
-bool van(int x, int y){
-if(v[x][y]>0){
-    return true;
-}
-return false;
-}
 
-int csomopontokszama(int csomopont){
-int S=0;
-for(int i=0; i<n;i++){
-    S=S+v[i][csomopont];
-    return S;
+bool osszekottetes(int pont1, int pont2, int matrix[10][10])
+{
+    if(matrix[pont1-1][pont2-1] == 1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
     }
 }
 
-for(i=1;i<n+1:i++){
-        cs[i]=i;
+int osszekottetes_szama(int csomopont, int matrix[10][10]){
+    int szamlalo = 0;
+    for(int i=0; i<8; i++){
+        if(matrix[csomopont-1][i] == 1){
+            szamlalo ++;
+        }
+    }
+    return szamlalo;
 }
- for(i=0;i<n;i++){
-        for(j=0;j<n;j++){
-            if(csomopontokszama(v[i])<csomopontokszama(v[j])){
-                int aux=cs[i];
-                cs[i]=cs[j];
-                cs[j]=cs[i];
+
+int main()
+{
+    int a[10][10] = {0};
+    a[0][1] = 1;
+    a[0][5] = 1;
+    a[1][0] = 1;
+    a[1][2] = 1;
+    a[1][3] = 1;
+    a[2][1] = 1;
+    a[2][3] = 1;
+    a[3][1] = 1;
+    a[3][2] = 1;
+    a[3][7] = 1;
+    a[4][5] = 1;
+    a[4][6] = 1;
+    a[4][7] = 1;
+    a[5][0] = 1;
+    a[5][4] = 1;
+    a[6][4] = 1;
+    a[7][3] = 1;
+    a[7][4] = 1;
+    for(int i=0; i<8; i++)
+    {
+        for(int j=0; j<8; j++)
+        {
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+    int pont1, pont2;
+    cout << "elso pont: ";
+    cin >> pont1;
+    cout << "masodik pont: ";
+    cin >> pont2;
+    if(osszekottetes(pont1, pont2, a) == 1){
+        cout << "van osszekottetes" << endl;
+    }
+    else{
+        cout << "nincs osszekottetes" << endl;
+    }
+    int csomopont;
+    cout << "csomopont: ";
+    cin >> csomopont;
+    cout << "osszekottetesek szama = " << osszekottetes_szama(csomopont, a) << endl;
+    int tomb1[10], tomb2[10];
+    for(int i=0 ; i<8; i++){
+        tomb1[i] = osszekottetes_szama(i+1, a);
+        tomb2[i] = i+1;
+    }
+    for(int i=0; i<7; i++){
+        for(int j=i+1; j<8; j++){
+            if(tomb1[i]>tomb1[j]){
+                swap(tomb1[i], tomb1[j]);
+                swap(tomb2[i], tomb2[j]);
             }
         }
     }
-int main(){
-int n=8;
-
-  int a[10][10];
-  for(int i=1; i<n+1; i++){
-    for(int j=1; j<n+1;j++){
-        a[i][j]=0;
-  }
-}
-a[1][2]=1;
-a[2][1]=1;
-a[1][6]=1;
-a[2][3]=1;
-a[2][4]=1;
-a[3][4]=1;
-a[4][8]=1;
-a[5][6]=1;
-a[5][7]=1;
-a[5][8]=1;
-for(int i=1; i<n+1;i++){
-    for(int j=i+1; j<n+1;j++){
-        a[j][i]=a[i][j];
+    cout << "a pontok az osszekottetesek szamanak novekvo sorrendjeben: ";
+    for(int i=0; i<8; i++){
+        cout << tomb2[i] << " ";
     }
-}
-for(int i=1;i<n+1;i++){
-    for(int j=1; j<n+1; j++){
-        cout<<a[i][j]<<" ";
-    }
-    cout<< endl;
-}
     return 0;
 }
